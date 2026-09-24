@@ -1,4 +1,4 @@
-﻿/**
+/**
  * LINTELDESK — Client Controller
  * Handles Mobile Menu, FAQ Accordion, and Shoppex Post-Purchase Redirects.
  */
@@ -70,9 +70,8 @@ function handleShoppexRedirectParams() {
 
   const urlParams = new URLSearchParams(paramsString);
   const orderId = urlParams.get('order_id') || urlParams.get('order') || urlParams.get('orderId');
-  const productId = urlParams.get('product_id') || urlParams.get('product');
 
-  if (orderId || productId) {
+  if (orderId) {
     const downloadSection = document.getElementById('download');
 
     if (downloadSection) {
@@ -95,15 +94,12 @@ function handleShoppexRedirectParams() {
         banner.innerHTML = `
           <div>
             <div style="font-weight: 700; color: #FFFFFF; font-size: 1.0625rem;">
-              ✓ Payment Confirmed via Shoppex.io ${orderId ? `(Order #${orderId})` : ''}
+              ✓ Payment Confirmed via Shoppex.io (Order #${orderId})
             </div>
             <div style="font-size: 0.875rem; color: var(--text-secondary); margin-top: 4px;">
-              Thank you for purchasing LintelDesk! Your download is ready below:
+              Your order is verified. Your digital receipt and installer download link have been sent to your email.
             </div>
           </div>
-          <a href="./Downoad/LintelDesk%20Setup%201.0.0%20-%20.exe" class="btn btn-primary btn-sm" download style="flex-shrink:0;">
-            Download Installer (82.7 MB)
-          </a>
         `;
         const downloadCard = document.querySelector('.download-card');
         if (downloadCard) {
@@ -117,3 +113,4 @@ function handleShoppexRedirectParams() {
     }
   }
 }
+
