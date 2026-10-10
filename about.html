@@ -3,16 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About LintelDesk — Independent Windows Software</title>
-  <meta name="description" content="Learn about LintelDesk, an independently built Windows productivity workstation focused on local files, offline use, and simple one-time pricing." />
+  <title>About LintelDesk — Independent Offline Windows Software</title>
+  <meta name="description" content="LintelDesk is an independently built, offline Windows workstation (Docs, Sheets, Tasks, Canvas). One-time $49 purchase, no account, no telemetry. Read who makes it, how it is sold, and why sales are final." />
   <meta name="theme-color" content="#000000" />
-  
-<link rel="icon" type="image/png" href="logo.png">
+  <link rel="canonical" href="https://linteldesk.com/about.html" />
+  <link rel="icon" type="image/png" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "@id": "https://linteldesk.com/about.html",
+        "url": "https://linteldesk.com/about.html",
+        "name": "About LintelDesk",
+        "dateModified": "2026-10-10",
+        "about": { "@id": "https://linteldesk.com/#software" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://linteldesk.com/#software",
+        "name": "LintelDesk",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Windows 10, Windows 11 (64-bit)",
+        "softwareVersion": "1.0.0",
+        "url": "https://linteldesk.com",
+        "description": "An offline desktop workstation for Windows combining Docs, Sheets, Tasks and Canvas. Local files, no account, no telemetry.",
+        "offers": { "@type": "Offer", "price": "49.00", "priceCurrency": "USD", "url": "https://linteldesk.com/#pricing" },
+        "publisher": { "@type": "Organization", "name": "LintelDesk", "url": "https://linteldesk.com", "email": "LintelDesk@atomicmail.io", "sameAs": ["https://github.com/z881k"] }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Is LintelDesk a real, working product?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LintelDesk v1.0.0 is a working Windows desktop application that you download and install after purchase." } },
+          { "@type": "Question", "name": "Why are sales final and non-refundable?", "acceptedAnswer": { "@type": "Answer", "text": "LintelDesk has no license keys, no accounts and no online activation, and it runs fully offline. Once the installer is downloaded the buyer keeps a working copy permanently, and the developer has no way to revoke it after a refund. If something is wrong with the product, support will help resolve it." } },
+          { "@type": "Question", "name": "Does LintelDesk work without internet access?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. An internet connection is only needed to purchase and download it." } },
+          { "@type": "Question", "name": "Does LintelDesk collect usage data?", "acceptedAnswer": { "@type": "Answer", "text": "No. The application does not send usage analytics or document content to any server." } },
+          { "@type": "Question", "name": "Who makes LintelDesk?", "acceptedAnswer": { "@type": "Answer", "text": "LintelDesk is built by an independent developer rather than a registered company. Support is handled directly at LintelDesk@atomicmail.io." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -21,7 +58,6 @@
       <a href="index.html#hero" class="brand-link" aria-label="LintelDesk Home">
         <img src="images/logo.png" alt="LintelDesk Logo" class="brand-logo-img" />
       </a>
-
       <nav>
         <ul class="nav-menu">
           <li><a href="index.html#features" class="nav-link">Features</a></li>
@@ -33,17 +69,12 @@
           <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
         </ul>
       </nav>
-
       <div style="display: flex; align-items: center; gap: 1rem;">
         <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b"
-           target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          Buy Now ($49)
-        </a>
+           target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Buy Now ($49)</a>
         <button class="mobile-toggle" aria-label="Open Menu">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
       </div>
@@ -55,26 +86,21 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <h1>About LintelDesk.</h1>
-
           <p>
-            LintelDesk is a new independently built Windows application created around
-            a simple idea: useful productivity software should be fast, straightforward,
-            and able to work with your files directly on your own computer.
+            LintelDesk is an independently built Windows application made around one idea:
+            useful productivity software should be fast, honest about what it is, and work
+            with your files directly on your own computer. This page explains who makes it,
+            how it is sold, and exactly what you are getting, including the parts that are
+            not for everyone.
           </p>
-
           <div class="hero-meta">
-            Independently developed • Windows 10 &amp; 11 • Local-first software
+            Independently developed • Windows 10 &amp; 11 • Local-first software • Last updated October 2026
           </div>
         </div>
-
         <div class="hero-visual">
           <div class="hero-frame">
             <div class="window-topbar">
-              <div class="window-dots">
-                <span class="w-dot"></span>
-                <span class="w-dot"></span>
-                <span class="w-dot"></span>
-              </div>
+              <div class="window-dots"><span class="w-dot"></span><span class="w-dot"></span><span class="w-dot"></span></div>
               <div class="window-tab-title">About — LintelDesk</div>
               <div style="width: 36px;"></div>
             </div>
@@ -86,42 +112,54 @@
 
     <div class="section-divider"></div>
 
+    <section class="section" id="at-a-glance">
+      <div class="container">
+        <div class="section-head">
+          <h2>LintelDesk at a glance</h2>
+          <p>The key facts in one place.</p>
+        </div>
+        <div class="comp-card" style="padding: 2rem; overflow-x: auto;">
+          <table style="width:100%; border-collapse:collapse; line-height:1.8;">
+            <tbody>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0; white-space:nowrap;">Product</th><td>LintelDesk, an offline desktop workstation with Docs, Sheets, Tasks, and Canvas</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Version</th><td>1.0.0</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Platform</th><td>Windows 10 and 11, 64-bit. No macOS, Linux, or mobile version.</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Price</th><td>$49 USD, one time. No subscription.</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Account needed</th><td>No. No sign-in, no license keys, no online activation.</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Internet needed</th><td>Only to purchase and download.</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Data collection</th><td>None. No usage analytics or document content is sent anywhere.</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Developer</th><td>Independent developer (not a registered company)</td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Support</th><td><a href="mailto:LintelDesk@atomicmail.io" class="nav-link">LintelDesk@atomicmail.io</a></td></tr>
+              <tr><th scope="row" style="text-align:left; padding:.5rem 1rem .5rem 0;">Public profiles</th><td><a href="https://github.com/z881k" class="nav-link" rel="noopener">GitHub z881k</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <section class="section">
       <div class="container">
         <div class="section-head">
           <h2>Why LintelDesk exists</h2>
-          <p>
-            LintelDesk started as an independent software project, not as a large company
-            or a corporate product.
-          </p>
+          <p>LintelDesk started as an independent software project, not as a large company or a corporate product.</p>
         </div>
-
         <div class="pillars-grid">
           <div class="pillar-card">
             <span class="pillar-num">01 / INDEPENDENT</span>
             <h3>Built independently</h3>
-            <p>
-              LintelDesk is developed independently. There is no large organization
-              behind the product and no claim of being a major software company.
-            </p>
+            <p>One developer builds and supports LintelDesk. There is no large organization behind it, and it does not claim to be a major software company.</p>
           </div>
-
           <div class="pillar-card">
             <span class="pillar-num">02 / LOCAL</span>
             <h3>Your computer comes first</h3>
-            <p>
-              The project is designed around local Windows software and local files,
-              rather than making a cloud account the center of the experience.
-            </p>
+            <p>It is designed around local Windows software and local files, not around a cloud account.</p>
           </div>
-
           <div class="pillar-card">
             <span class="pillar-num">03 / SIMPLE</span>
             <h3>Simple pricing</h3>
-            <p>
-              LintelDesk is offered as a one-time purchase instead of a recurring
-              monthly subscription for the product described on this site.
-            </p>
+            <p>One payment of $49 instead of a monthly subscription for the product described on this site.</p>
           </div>
         </div>
       </div>
@@ -134,22 +172,19 @@
         <div class="section-head">
           <h2>The problem LintelDesk tries to solve</h2>
           <p>
-            Most modern productivity tools are built cloud-first: a document editor, a
-            spreadsheet, a task board, and a diagramming tool, each as a separate
-            subscription, each requiring an internet connection, each storing your data
-            on someone else's server.
+            Most modern productivity tools are cloud-first: a document editor, a spreadsheet,
+            a task board, and a diagramming tool, each a separate subscription, each needing
+            an internet connection, each storing your data on someone else's server.
           </p>
         </div>
-
         <div class="comp-card" style="padding: 2rem;">
           <p style="font-size: 1.05rem; line-height: 1.8; margin: 0;">
-            LintelDesk combines four of those functions — Docs, Sheets, Tasks, and Canvas —
-            into a single native Windows program that runs on your machine, keeps files in
-            open formats on your own hard drive, and is licensed with a single payment
-            rather than a monthly fee. It will not fit every workflow — teams that need
-            real-time multi-user collaboration or mobile access are better served by a
-            cloud suite. It's built for people who work primarily on one Windows PC and
-            want their files to stay there.
+            LintelDesk combines four of those functions (Docs, Sheets, Tasks, and Canvas)
+            in one native Windows program that runs on your machine, keeps files in open
+            formats on your own hard drive, and is paid for once. It will not fit every
+            workflow. Teams that need real-time multi-user collaboration or mobile access are
+            better served by a cloud suite. LintelDesk is for people who work mainly on one
+            Windows PC and want their files to stay there.
           </p>
         </div>
       </div>
@@ -161,121 +196,100 @@
       <div class="container">
         <div class="section-head">
           <h2>How LintelDesk handles your data</h2>
-          <p>
-            Concrete detail on where files go and what the application does and does not do.
-          </p>
+          <p>What the application does and does not do with your files.</p>
         </div>
-
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">STORAGE</span>
-              <h3>Local files only</h3>
-              <p>
-                Workspaces are saved to your hard drive in the <code>.linteldesk</code> workspace
-                format, alongside open formats such as <code>.md</code>, <code>.csv</code>,
-                <code>.json</code>, and <code>.png</code> for individual documents and exports.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">NETWORK</span>
-              <h3>No account required to use it</h3>
-              <p>
-                LintelDesk does not require creating an online account or signing in to open
-                and edit your files. An internet connection is only used at the point of
-                purchase and download, not during day-to-day use.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">TELEMETRY</span>
-              <h3>No usage tracking</h3>
-              <p>
-                The application does not send usage analytics or document content to any
-                server while you work. Full details are in the
-                <a href="privacy.html" class="nav-link">Privacy Policy</a>.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">BACKUPS</span>
-              <h3>You are responsible for backups</h3>
-              <p>
-                Because files live only on your machine, LintelDesk does not provide cloud
-                backup. We recommend including your workspace folder in whatever backup
-                routine (external drive, personal cloud folder, etc.) you already use.
-              </p>
-            </div>
-          </div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">STORAGE</span>
+            <h3>Local files only</h3>
+            <p>Workspaces are saved to your hard drive in the <code>.linteldesk</code> format, with open formats such as <code>.md</code>, <code>.csv</code>, <code>.json</code>, and <code>.png</code> for documents and exports.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">NETWORK</span>
+            <h3>No account required</h3>
+            <p>You never create an account or sign in to open and edit files. The internet is used only at purchase and download, not during day-to-day use.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">TELEMETRY</span>
+            <h3>No usage tracking</h3>
+            <p>The application does not send usage analytics or document content to any server. Details are in the <a href="privacy.html" class="nav-link">Privacy Policy</a>.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">BACKUPS</span>
+            <h3>You own your backups</h3>
+            <p>Files live only on your machine, so there is no cloud backup. Include your workspace folder in the backup routine you already use.</p>
+          </div></div>
         </div>
       </div>
     </section>
 
     <div class="section-divider"></div>
 
-    
+    <section class="section" id="refunds">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why sales are final</h2>
+          <p>
+            LintelDesk does not offer refunds, and the reason is technical rather than a way to
+            avoid responsibility. Here is the reasoning in full.
+          </p>
+        </div>
+        <div class="comp-card" style="padding: 2rem;">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin: 0 0 1rem;">
+            LintelDesk is a one-time purchase with <strong>no license keys, no accounts, and no
+            online activation</strong>. The installer is a complete, working copy of the software
+            that runs fully offline. Once a customer has downloaded it, they keep a working copy
+            permanently. There is no server that can switch it off, and no key I can cancel.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin: 0 0 1rem;">
+            That means a refund could not take the software back. A buyer would receive their
+            money and still own a fully working program. Because of that, I mark all sales as
+            final instead of offering a refund process that cannot actually reverse the purchase.
+            That is the only reason, and it is not an attempt to avoid refunds or to make
+            problems hard to raise.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin: 0;">
+            If something is wrong, <strong>you are not left on your own</strong>. If the installer
+            will not run, the software does not behave as described, or you were charged in error,
+            email <a href="mailto:LintelDesk@atomicmail.io" class="nav-link">LintelDesk@atomicmail.io</a>
+            with your order details. Support is handled by the developer directly, and I will work
+            with you to resolve it. To help you decide before buying, this page lists the system
+            requirements and what LintelDesk is not. See the
+            <a href="terms.html" class="nav-link">Terms of Service</a> for the full wording.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <div class="section-divider"></div>
 
     <section class="section">
       <div class="container">
         <div class="section-head">
           <h2>What LintelDesk is not</h2>
-          <p>
-            A clear description is more useful than pretending to be something it isn't.
-          </p>
+          <p>A clear description is more useful than pretending to be something it isn't.</p>
         </div>
-
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">INDEPENDENT PROJECT</span>
-              <h3>Not a large software company</h3>
-              <p>
-                LintelDesk is not presented as a large corporation, enterprise vendor,
-                or team of hundreds of people. It is an independently developed product.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">NO PRETENDING</span>
-              <h3>No fake customers or endorsements</h3>
-              <p>
-                LintelDesk does not use made-up customer counts, fake testimonials,
-                or invented partnerships to make the project appear larger than it is.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">NOT A CLOUD SUITE</span>
-              <h3>No real-time collaboration</h3>
-              <p>
-                LintelDesk is single-user, single-machine software. It does not offer
-                live multi-person editing the way a cloud-based office suite does.
-              </p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">NOT CROSS-PLATFORM</span>
-              <h3>Windows only, for now</h3>
-              <p>
-                The application currently supports Windows 10 and 11 (64-bit) only.
-                There is no macOS, Linux, or mobile version at this time.
-              </p>
-            </div>
-          </div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">INDEPENDENT PROJECT</span>
+            <h3>Not a large software company</h3>
+            <p>It is not presented as a corporation, enterprise vendor, or team of hundreds. It is an independently developed product.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">NO PRETENDING</span>
+            <h3>No fake customers or endorsements</h3>
+            <p>LintelDesk does not use made-up customer counts, fake testimonials, or invented partnerships.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">NOT A CLOUD SUITE</span>
+            <h3>No real-time collaboration</h3>
+            <p>It is single-user, single-machine software with no live multi-person editing.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">NOT CROSS-PLATFORM</span>
+            <h3>Windows only, for now</h3>
+            <p>Windows 10 and 11 (64-bit) only. There is no macOS, Linux, or mobile version at this time.</p>
+          </div></div>
         </div>
       </div>
     </section>
@@ -284,32 +298,45 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Who LintelDesk is built for</h2>
-        </div>
-
+        <div class="section-head"><h2>Who LintelDesk is built for</h2></div>
         <div class="pillars-grid">
           <div class="pillar-card">
             <h3>Writers &amp; note-takers</h3>
-            <p>
-              People who want a fast, distraction-free Markdown editor with an outline
-              view, without a browser tab or a subscription attached to it.
-            </p>
+            <p>A fast, distraction-free Markdown editor with an outline view, without a browser tab or subscription.</p>
           </div>
           <div class="pillar-card">
             <h3>Freelancers &amp; solo operators</h3>
-            <p>
-              People tracking tasks, simple budgets, and project diagrams for their own
-              work, on their own machine, without paying for a team-sized SaaS plan.
-            </p>
+            <p>Tasks, simple budgets, and project diagrams for your own work, on your own machine, without a team-sized SaaS plan.</p>
           </div>
           <div class="pillar-card">
             <h3>Privacy-conscious users</h3>
-            <p>
-              People who would rather their documents never touch a third-party server,
-              by design rather than by a settings toggle.
-            </p>
+            <p>Documents that never touch a third-party server, by design rather than by a settings toggle.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section class="section" id="verify">
+      <div class="container">
+        <div class="section-head">
+          <h2>Verify your download</h2>
+          <p>Being open about the installer is part of being trustworthy.</p>
+        </div>
+        <div class="comp-card" style="padding: 2rem;">
+          <p style="font-size: 1.05rem; line-height: 1.8; margin: 0 0 1rem;">
+            The Windows installer for v1.0.0 is currently <strong>not code-signed</strong>. Because
+            of this, Windows SmartScreen may show an "unrecognized app" warning when you run it. You
+            can check that your download is the file published here by comparing its SHA-256 hash:
+          </p>
+          <p style="margin: 0 0 1rem; word-break: break-all;"><code>629EFBE41C3288341BAB67BAE7031F9BFC4416102FD9C1BED594A2C19C87B2EB</code></p>
+          <p style="font-size: 1.05rem; line-height: 1.8; margin: 0;">
+            In PowerShell, run <code>Get-FileHash "path\to\installer.exe" -Algorithm SHA256</code>
+            and compare the result. A matching hash shows the file is unchanged since it was
+            published; it does not on its own prove a file is safe, so you are welcome to scan the
+            installer with your own security software before running it.
+          </p>
         </div>
       </div>
     </section>
@@ -321,7 +348,6 @@
         <div class="section-head">
           <h2>System requirements</h2>
         </div>
-
         <div class="comp-card" style="padding: 2rem;">
           <ul style="font-size: 1.05rem; line-height: 2; margin: 0; padding-left: 1.2rem;">
             <li>Windows 10 or Windows 11, 64-bit</li>
@@ -337,55 +363,28 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Purchasing, licensing, and refunds</h2>
-        </div>
-
+        <div class="section-head"><h2>Purchasing and licensing</h2></div>
         <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">CHECKOUT</span>
-              <h3>Payment processing</h3>
-              <p>
-                Checkout is handled through Shoppex.io, with card payments processed by
-                Stripe. Credit/debit card is the standard payment method; select
-                cryptocurrencies are available as an optional alternative at checkout.
-                LintelDesk does not directly handle or store your card details.
-              </p>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">LICENSE SCOPE</span>
-              <h3>Personal license</h3>
-              <p>
-                A single license activates on up to three personal Windows computers
-                belonging to the purchaser, covering common cases like a desktop and a laptop.
-              </p>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">UPDATES</span>
-              <h3>What "lifetime" covers</h3>
-              <p>
-                Your license includes free updates within the v1.x release line. Refer to
-                the <a href="terms.html" class="nav-link">Terms of Service</a> for the full
-                definition of update eligibility and any future major-version policy.
-              </p>
-            </div>
-          </div>
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">REFUNDS</span>
-              <h3>Refund requests</h3>
-              <p>
-                For refund eligibility and the process to request one, see the
-                <a href="terms.html" class="nav-link">Terms of Service</a>, or contact
-                support directly with your order details.
-              </p>
-            </div>
-          </div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">CHECKOUT</span>
+            <h3>Payment processing</h3>
+            <p>Checkout runs through Shoppex.io, with card payments processed by Stripe. Select cryptocurrencies are an optional alternative. LintelDesk never sees or stores your card details.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">LICENSE SCOPE</span>
+            <h3>Personal license</h3>
+            <p>One purchase covers installation on up to three personal Windows computers that you own, such as a desktop and a laptop. There is no activation step.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">UPDATES</span>
+            <h3>What "lifetime" covers</h3>
+            <p>Free updates within the v1.x release line. See the <a href="terms.html" class="nav-link">Terms of Service</a> for the full definition and any future major-version policy.</p>
+          </div></div>
+          <div class="feature-card"><div class="feature-card-content">
+            <span class="feature-tag">REFUNDS</span>
+            <h3>Sales are final</h3>
+            <p>Read <a href="#refunds" class="nav-link">why sales are final</a> above. If anything goes wrong, support will help you resolve it.</p>
+          </div></div>
         </div>
       </div>
     </section>
@@ -398,35 +397,42 @@
           <h2>Frequently asked questions</h2>
           <p>Straight answers about the software, the developer, and how it's sold.</p>
         </div>
-
         <div class="comp-card" style="padding: 2rem;">
           <details style="margin-bottom:1.25rem;">
             <summary style="font-weight:600; cursor:pointer;">Is LintelDesk a real, working product?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Yes. LintelDesk is a functioning Windows desktop application (v1.0.0) that you download and install after purchase. It is not vaporware or a pre-order for something that doesn't exist yet.</p>
+            <p style="margin-top:0.75rem; line-height:1.8;">Yes. LintelDesk v1.0.0 is a working Windows desktop application that you download and install after purchase. It is not vaporware or a pre-order.</p>
           </details>
           <details style="margin-bottom:1.25rem;">
-            <summary style="font-weight:600; cursor:pointer;">Why doesn't the site list a company name or team?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">LintelDesk is built by an independent developer rather than a registered company with a public team page. That's disclosed here rather than hidden, and support is handled directly through the contact email listed on this site.</p>
+            <summary style="font-weight:600; cursor:pointer;">Why are sales final and non-refundable?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">With no license keys, no accounts, and no online activation, the installer is a complete offline copy. After download the buyer keeps it permanently, and there is no way to revoke it after a refund. If something is wrong, email support and it will be worked out with you. <a href="#refunds" class="nav-link">Read the full explanation.</a></p>
+          </details>
+          <details style="margin-bottom:1.25rem;">
+            <summary style="font-weight:600; cursor:pointer;">Who makes LintelDesk, and why is there no company name?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">LintelDesk is built by an independent developer rather than a registered company with a team page. That is disclosed here instead of hidden. Support is handled directly through LintelDesk@atomicmail.io.</p>
           </details>
           <details style="margin-bottom:1.25rem;">
             <summary style="font-weight:600; cursor:pointer;">Is my payment information safe?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Checkout runs through Shoppex.io, with card payments processed by Stripe. Cryptocurrency is offered as an optional alternative for those who prefer it. LintelDesk never sees or stores your full card number.</p>
+            <p style="margin-top:0.75rem; line-height:1.8;">Checkout runs through Shoppex.io, with card payments processed by Stripe. LintelDesk never sees or stores your full card number.</p>
+          </details>
+          <details style="margin-bottom:1.25rem;">
+            <summary style="font-weight:600; cursor:pointer;">Does LintelDesk collect usage data?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">No. The application does not send usage analytics or document content to any server while you work.</p>
+          </details>
+          <details style="margin-bottom:1.25rem;">
+            <summary style="font-weight:600; cursor:pointer;">Does it work without internet access?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">Yes. Once installed it runs fully offline. The internet is only needed to purchase and download it.</p>
+          </details>
+          <details style="margin-bottom:1.25rem;">
+            <summary style="font-weight:600; cursor:pointer;">Why does Windows warn me when I run the installer?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">The v1.0.0 installer is not code-signed yet, so SmartScreen may flag it as unrecognized. You can <a href="#verify" class="nav-link">verify its SHA-256 hash</a> and scan it with your own security software first.</p>
           </details>
           <details style="margin-bottom:1.25rem;">
             <summary style="font-weight:600; cursor:pointer;">What happens to my files if I stop using LintelDesk?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Your files remain on your hard drive in open formats (Markdown, CSV, JSON, PNG) that you can open with other software. Uninstalling LintelDesk does not delete or lock your existing documents.</p>
-          </details>
-          <details style="margin-bottom:1.25rem;">
-            <summary style="font-weight:600; cursor:pointer;">Does LintelDesk work without internet access?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Yes. Once installed, the application runs fully offline. An internet connection is only needed to purchase and download it.</p>
-          </details>
-          <details style="margin-bottom:1.25rem;">
-            <summary style="font-weight:600; cursor:pointer;">Can I try LintelDesk before buying?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Check the <a href="index.html#download" class="nav-link">Download</a> section for current availability of a trial or demo build.</p>
+            <p style="margin-top:0.75rem; line-height:1.8;">They stay on your hard drive in open formats (Markdown, CSV, JSON, PNG). Uninstalling does not delete or lock your documents.</p>
           </details>
           <details style="margin-bottom:0;">
-            <summary style="font-weight:600; cursor:pointer;">How do I get support if something breaks?</summary>
-            <p style="margin-top:0.75rem; line-height:1.8;">Email the address in the Contact section below with your order details and a description of the issue. Support is provided directly by the developer.</p>
+            <summary style="font-weight:600; cursor:pointer;">How do I get support?</summary>
+            <p style="margin-top:0.75rem; line-height:1.8;">Email LintelDesk@atomicmail.io with your order details and a description of the issue. The developer answers directly.</p>
           </details>
         </div>
       </div>
@@ -438,28 +444,14 @@
       <div class="container">
         <div class="section-head">
           <h2>Questions or support?</h2>
-          <p>
-            If you have a question about LintelDesk, your purchase, or the software,
-            you can contact the project directly.
-          </p>
+          <p>For questions about LintelDesk, your purchase, or the software, contact the project directly.</p>
         </div>
-
         <div class="pricing-wrapper">
           <div class="pricing-card">
             <div class="pricing-plan-title">LintelDesk Support</div>
-            <p class="pricing-desc">
-              For product questions, purchase help, technical issues, or other
-              LintelDesk-related questions.
-            </p>
-
-            <a href="mailto:LintelDesk@atomicmail.io" class="btn btn-primary btn-lg"
-               style="width: 100%; max-width: 440px;">
-              Contact LintelDesk
-            </a>
-
-            <div class="payment-badges-row">
-              LintelDesk@atomicmail.io
-            </div>
+            <p class="pricing-desc">Product questions, purchase help, technical issues, or anything LintelDesk-related.</p>
+            <a href="mailto:LintelDesk@atomicmail.io" class="btn btn-primary btn-lg" style="width: 100%; max-width: 440px;">Contact LintelDesk</a>
+            <div class="payment-badges-row">LintelDesk@atomicmail.io</div>
           </div>
         </div>
       </div>
@@ -468,10 +460,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-copy">
-        © 2026 LintelDesk. Independent software for Windows.
-      </div>
-
+      <div class="footer-copy">© 2026 LintelDesk. Independent software for Windows.</div>
       <ul class="footer-links-list">
         <li><a href="about.html" class="footer-link">About LintelDesk</a></li>
         <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
