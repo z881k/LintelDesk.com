@@ -1,452 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="logo.png">
-  <title>LintelDesk — The Offline Desktop Workstation for Windows</title>
-  <meta name="gridinsoft-key" content="z307arwxmlunxti1tvqyigjngxfjx3qfcw92njmbzhxirxfr6nfvbhjpmajfao5b" />
-  
-  <meta name="description" content="Docs, Sheets, Tasks, and Canvas unified on your local machine. $49 once. No subscriptions. No cloud lock-in." />
-  <meta name="theme-color" content="#000000" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="logo.png">
+<title>LintelDesk — The Offline Desktop Workstation for Windows</title>
+<meta name="gridinsoft-key" content="z307arwxmlunxti1tvqyigjngxfjx3qfcw92njmbzhxirxfr6nfvbhjpmajfao5b" />
+<meta name="description" content="Docs, Sheets, Tasks, and Canvas unified on your local machine. $49 once. No subscriptions. No cloud lock-in." />
+<meta name="theme-color" content="#e6e8ea" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5978906371878129" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"LintelDesk","operatingSystem":"Windows 10, Windows 11 (64-bit)","applicationCategory":"ProductivityApplication","offers":{"@type":"Offer","price":"49.00","priceCurrency":"USD"}}
+</script>
+<style>
+:root{
+  --bg:#e6e8ea; --paper:#f4f5f6; --ink:#14181d; --mid:#4a525c; --soft:#7b848f; --rule:#c5cacf;
+  --accent:#0b7a6b; --accent-d:#085c51; --dark:#14181d;
+  --display:'Bricolage Grotesque',Georgia,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:min(1180px,100% - 48px);margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.025em;line-height:1.05}
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5978906371878129"
-     crossorigin="anonymous"></script>
+.btn{display:inline-flex;align-items:center;gap:.6rem;font:500 .95rem var(--body);padding:.85rem 1.35rem;border-radius:4px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background .15s,color .15s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn-buy{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-buy:hover{background:var(--accent-d);border-color:var(--accent-d);color:#fff}
+.btn-sm{padding:.5rem 1rem;font-size:.875rem}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+/* top bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.bar-in{display:flex;align-items:center;gap:2rem;height:64px}
+.brand-logo-img{height:30px;width:auto}
+.menu{display:flex;gap:1.6rem;margin-left:auto;font-size:.9rem;color:var(--mid)}
+.menu a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+.toggle{display:none;margin-left:auto;background:none;border:1px solid var(--ink);border-radius:4px;width:38px;height:36px;cursor:pointer}
 
-  <link rel="stylesheet" href="styles.css" />
+/* hero */
+.hero{padding:76px 0 0}
+.hero-top{display:grid;grid-template-columns:1.25fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem}
+h1{font-size:clamp(2.8rem,6.2vw,5.4rem)}
+.hero-side p{color:var(--mid);font-size:1.125rem;margin-bottom:1.6rem;max-width:42ch}
+.hero-side .row{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero-side small{display:block;margin-top:1rem;color:var(--soft);font-size:.85rem}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "LintelDesk",
-    "operatingSystem": "Windows 10, Windows 11 (64-bit)",
-    "applicationCategory": "ProductivityApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "49.00",
-      "priceCurrency": "USD"
-    }
-  }
-  </script>
+/* app window */
+.win{background:var(--paper);border:1px solid #aeb4ba;border-radius:8px 8px 0 0;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,24,29,.45)}
+.win-bar{display:flex;align-items:center;gap:1rem;height:38px;padding:0 0 0 14px;background:#dfe2e5;border-bottom:1px solid #c5cacf;font-size:.8rem;color:var(--mid)}
+.win-bar b{font-weight:500;background:var(--paper);height:100%;display:flex;align-items:center;padding:0 16px;border-right:1px solid #c5cacf;border-left:1px solid #c5cacf;color:var(--ink)}
+.win-ctl{margin-left:auto;display:flex;height:100%}
+.win-ctl span{width:46px;display:grid;place-items:center;font-size:.75rem;color:var(--mid)}
+.win-ctl span:last-child:hover{background:#c42b1c;color:#fff}
+.win-status{display:flex;gap:1.6rem;padding:.4rem 14px;background:var(--accent);color:#e5f4f1;font-size:.75rem;flex-wrap:wrap}
+
+/* features: alternating rows */
+section{padding:110px 0 0}
+.head{max-width:720px;margin-bottom:3.5rem}
+.head h2{font-size:clamp(2.1rem,4.2vw,3.4rem);margin-bottom:1rem}
+.head p{color:var(--mid);font-size:1.125rem;max-width:56ch}
+.feat{display:grid;grid-template-columns:5fr 7fr;gap:3.5rem;align-items:center;padding:3rem 0;border-top:1px solid var(--rule)}
+.feat.flip{grid-template-columns:7fr 5fr}
+.feat.flip .feat-text{order:2}
+.feat h3{font-size:1.9rem;margin-bottom:.8rem}
+.feat p{color:var(--mid);max-width:44ch}
+.feat .shot{border:1px solid #aeb4ba;border-radius:6px;overflow:hidden;background:var(--paper);box-shadow:0 18px 40px -24px rgba(20,24,29,.5)}
+
+/* specs list */
+.specs{border-top:2px solid var(--ink)}
+.spec{display:grid;grid-template-columns:260px 1fr 1.2fr;gap:2rem;padding:1.7rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.spec h3{font-size:1.5rem}
+.spec .big{font:700 1.05rem var(--display);color:var(--accent)}
+.spec p{color:var(--mid)}
+
+/* comparison */
+.table-scroll{overflow-x:auto}
+.cmp{width:100%;border-collapse:collapse;min-width:640px}
+.cmp th,.cmp td{text-align:left;padding:1.05rem 1.2rem;border-bottom:1px solid var(--rule)}
+.cmp thead th{font:700 1.15rem var(--display);border-bottom:2px solid var(--ink);padding-top:.6rem}
+.cmp td:first-child{color:var(--mid);width:28%}
+.cmp .us{background:var(--paper);font-weight:500}
+.cmp .us::before{content:"✓ ";color:var(--accent);font-weight:600}
+.cmp .them{color:var(--soft)}
+.cmp .them::before{content:"✕ "}
+
+/* pricing */
+.price{display:grid;grid-template-columns:1fr 1.1fr;background:var(--dark);color:#e8eaed;border-radius:6px;overflow:hidden}
+.price-l{padding:3.2rem;border-right:1px solid #2c333b}
+.price-l .plan{color:#9aa3ad;font-size:.9rem;margin-bottom:1.2rem}
+.amt{display:flex;align-items:baseline;gap:.5rem;font:700 7rem/1 var(--display);letter-spacing:-.05em;color:#fff}
+.amt sup{font-size:2.4rem;letter-spacing:0;vertical-align:top;position:relative;top:.8rem}
+.amt small{font:400 .95rem var(--body);letter-spacing:0;color:#9aa3ad}
+.price-l p{margin:1.2rem 0 2rem;color:#9aa3ad}
+.price-l .btn{width:100%;justify-content:center;padding:1rem}
+.price-l .note{display:block;margin-top:1rem;font-size:.8rem;color:#77818c}
+.price-r{padding:3.2rem}
+.price-r li{display:flex;gap:.9rem;padding:.95rem 0;border-bottom:1px solid #2c333b}
+.price-r li:last-child{border:0}
+.price-r li::before{content:"✓";color:#4fd1b9;font-weight:600}
+
+/* download */
+.dl{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;padding:2.2rem 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.dl h3{font-size:1.6rem;margin-bottom:.3rem}
+.dl p{color:var(--mid)}
+.chips{margin-top:1rem;display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.85rem;color:var(--soft)}
+
+/* faq */
+.faq{border-top:2px solid var(--ink);max-width:860px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.3rem 0;font:700 1.2rem var(--display);letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 1.6rem/1 var(--body);color:var(--accent)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 1.4rem;color:var(--mid);max-width:62ch}
+
+footer{margin-top:120px;border-top:1px solid var(--rule);padding:2.2rem 0;color:var(--mid);font-size:.875rem}
+.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.foot ul{display:flex;gap:1.6rem;flex-wrap:wrap}
+.foot a:hover{color:var(--ink);text-decoration:underline}
+
+@media(max-width:900px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--rule);padding:.5rem 24px}
+  .menu.open{display:flex}.menu a{padding:.8rem 0}
+  .toggle{display:block}.bar .btn-sm{display:none}
+  .hero{padding-top:44px}.hero-top,.feat,.feat.flip,.price{grid-template-columns:1fr;gap:1.6rem}
+  .feat.flip .feat-text{order:0}
+  .spec{grid-template-columns:1fr;gap:.4rem}
+  .price-l{border-right:0;border-bottom:1px solid #2c333b;padding:2rem}.price-r{padding:1.5rem 2rem 2rem}
+  .amt{font-size:5.5rem}section{padding-top:80px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-  <!-- Top Navigation -->
-  <header class="header">
-    <div class="container nav-row">
-      <a href="#hero" class="brand-link" aria-label="LintelDesk Home">
-        <img src="images/logo.png" alt="LintelDesk Logo" class="brand-logo-img" />
-      </a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a href="#top" aria-label="LintelDesk Home"><img src="images/logo.png" alt="LintelDesk Logo" class="brand-logo-img" /></a>
+    <nav class="menu" id="menu">
+      <a href="#features">Features</a><a href="#architecture">Architecture</a><a href="#comparison">Comparison</a><a href="#pricing">Pricing</a><a href="about.html">About</a><a href="#download">Download</a><a href="#faq">FAQ</a>
+    </nav>
+    <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-buy btn-sm">Buy now — $49</a>
+    <button class="toggle" id="toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
 
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#architecture" class="nav-link">Architecture</a></li>
-          <li><a href="#comparison" class="nav-link">Comparison</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="#download" class="nav-link">Download</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-top">
+      <h1>Your whole workday, on your own hard drive.</h1>
+      <div class="hero-side">
+        <p>LintelDesk puts Docs, Sheets, Tasks, and Canvas in one native Windows app. Pay $49 once. No subscription, no account, no cloud.</p>
+        <div class="row">
+          <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-buy">Buy LintelDesk — $49</a>
+          <a href="#features" class="btn">See the features</a>
+        </div>
+        <small>Windows 10 &amp; 11 (64-bit) · Lifetime license · Free v1.x updates</small>
+      </div>
+    </div>
+
+    <div class="win" id="hero">
+      <div class="win-bar">
+        <b>Workspace.linteldesk</b><span>DirectX 12</span>
+        <div class="win-ctl"><span>–</span><span>☐</span><span>✕</span></div>
+      </div>
+      <img src="images/workstation-canvas.png" alt="LintelDesk Workstation Interface" />
+      <div class="win-status"><span>Saved to this PC</span><span>0 bytes uploaded</span><span>Memory ~45 MB</span><span>Offline</span></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h2>Four tools that used to be four subscriptions.</h2>
+        <p>One window, one file format, one price. Everything opens in under a second.</p>
+      </div>
+      <div class="feat">
+        <div class="feat-text">
+          <h3>Docs &amp; Financial Sheets</h3>
+          <p>Write in a distraction-free Markdown editor with live preview and an outline tree. Drop formulas straight into your notes.</p>
+        </div>
+        <div class="shot"><img src="images/docs-split-editor.png" alt="LintelDesk Split Markdown Editor" /></div>
+      </div>
+      <div class="feat flip">
+        <div class="feat-text">
+          <h3>Tasks &amp; System Diagrams</h3>
+          <p>Plan sprints on a Kanban board, then link cards to flowcharts and system diagrams with vector connector arrows.</p>
+        </div>
+        <div class="shot"><img src="images/tasks-canvas-diagram.png" alt="LintelDesk Kanban Sprint Board with Canvas Diagrams" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture">
+    <div class="wrap">
+      <div class="head">
+        <h2>Fast, private, and yours.</h2>
+        <p>A native Windows app with no cloud dependency and no telemetry.</p>
+      </div>
+      <div class="specs">
+        <div class="spec"><h3>Sub-second boot</h3><div class="big">Under 0.8 seconds</div><p>DirectX 12 acceleration keeps pan and zoom at 60 fps, with no network lag.</p></div>
+        <div class="spec"><h3>100% local files</h3><div class="big">Zero bytes uploaded</div><p>Workspaces stay on your drive in open formats: .linteldesk, .md, and .csv.</p></div>
+        <div class="spec"><h3>Pay once, own it</h3><div class="big">$49, one time</div><p>No monthly fees, no price hikes, and no cloud shutdown to worry about.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <div class="wrap">
+      <div class="head">
+        <h2>LintelDesk vs. cloud suites.</h2>
+        <p>What changes when your tools run on your own machine.</p>
+      </div>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th></th><th>LintelDesk</th><th>Cloud SaaS suites</th></tr></thead>
+          <tbody>
+            <tr><td>Pricing</td><td class="us">$49 one-time, lifetime</td><td class="them">$15–$30 per month</td></tr>
+            <tr><td>File storage</td><td class="us">Local hard drive</td><td class="them">Remote servers</td></tr>
+            <tr><td>Offline use</td><td class="us">Fully functional</td><td class="them">Read-only or disabled</td></tr>
+            <tr><td>Latency</td><td class="us">0 ms, instant</td><td class="them">50–300 ms</td></tr>
+            <tr><td>Telemetry</td><td class="us">None</td><td class="them">Continuous analytics</td></tr>
+            <tr><td>RAM footprint</td><td class="us">~45 MB idle</td><td class="them">800 MB – 2 GB in browser tabs</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="head">
+        <h2>One payment. Lifetime access.</h2>
+        <p>Simple pricing with no hidden subscriptions.</p>
+      </div>
+      <div class="price">
+        <div class="price-l">
+          <div class="plan">Commercial Workstation License</div>
+          <div class="amt"><sup>$</sup>49<small>USD, one-time</small></div>
+          <p>Lifetime license with free v1.x updates.</p>
+          <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-buy">Buy LintelDesk — $49</a>
+          <span class="note">Cards processed by Stripe · Checkout via Shoppex.io · Crypto accepted as an alternative</span>
+        </div>
+        <ul class="price-r">
+          <li>All 4 modules included: Docs, Sheets, Tasks, Design</li>
+          <li>Unlimited workspaces and local files</li>
+          <li>Activate on up to 3 personal Windows computers</li>
+          <li>100% offline with zero cloud dependencies</li>
+          <li>Perpetual ownership with free v1.x maintenance updates</li>
         </ul>
-      </nav>
-
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          Buy Now ($49)
-        </a>
-        <button class="mobile-toggle" aria-label="Open Menu">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="container hero-grid">
-        
-        <div class="hero-content">
-          <h1>
-            The Offline Desktop Workstation.
-          </h1>
-
-          <p>
-            Docs, Sheets, Tasks, and Canvas unified on your local Windows PC. $49 once. No subscriptions. No cloud lock-in. Your data never leaves your hard drive.
-          </p>
-
-          <div class="hero-actions">
-            <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
-              Buy LintelDesk — $49
-            </a>
-            <a href="#features" class="btn btn-secondary btn-lg">
-              Explore Features
-            </a>
-          </div>
-
-          <div class="hero-meta">
-            Single one-time payment • Windows 10 &amp; 11 (64-bit) • Lifetime access
-          </div>
+  <section id="download">
+    <div class="wrap">
+      <div class="dl">
+        <div>
+          <h3>Get LintelDesk v1.0.0 for Windows</h3>
+          <p>Windows 10 &amp; 11 (64-bit) · 82.7 MB installer · Delivered instantly after purchase via Shoppex.io.</p>
+          <div class="chips"><span>64-bit native</span><span>Zero telemetry</span><span>DirectX 12</span><span>SHA-256 verified</span></div>
         </div>
-
-        <div class="hero-visual">
-          <div class="hero-frame">
-            <div class="window-topbar">
-              <div class="window-dots">
-                <span class="w-dot"></span>
-                <span class="w-dot"></span>
-                <span class="w-dot"></span>
-              </div>
-              <div class="window-tab-title">Workspace.linteldesk — DirectX 12</div>
-              <div style="width: 36px;"></div>
-            </div>
-            <img src="images/workstation-canvas.png" alt="LintelDesk Workstation Interface" />
-          </div>
-        </div>
-
+        <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-buy">Buy license &amp; download — $49</a>
       </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Core Features Showcase -->
-    <section class="section" id="features">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Built for focused work</h2>
-          <p>
-            A single native application that replaces four separate browser subscriptions.
-          </p>
-        </div>
-
-        <div class="features-grid">
-          
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">WRITING &amp; CALCULATION</span>
-              <h3>Docs &amp; Financial Sheets</h3>
-              <p>
-                Distraction-free Markdown editor with live typographic preview, outline tree, and embedded formula calculations.
-              </p>
-            </div>
-            <div class="feature-card-media">
-              <img src="images/docs-split-editor.png" alt="LintelDesk Split Markdown Editor" />
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card-content">
-              <span class="feature-tag">PIPELINES &amp; CANVAS</span>
-              <h3>Tasks &amp; System Diagrams</h3>
-              <p>
-                Visual Kanban board connected directly to decision flowcharts and system diagrams with vector connector arrows.
-              </p>
-            </div>
-            <div class="feature-card-media">
-              <img src="images/tasks-canvas-diagram.png" alt="LintelDesk Kanban Sprint Board with Canvas Diagrams" />
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Architecture Pillars -->
-    <section class="section" id="architecture">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Engineered for speed and privacy</h2>
-          <p>
-            Native Windows architecture with zero cloud dependencies and zero telemetry.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          
-          <div class="pillar-card">
-            <span class="pillar-num">01 / PERFORMANCE</span>
-            <h3>Sub-Second Boot</h3>
-            <p>
-              Launches in under 0.8 seconds. DirectX 12 hardware acceleration delivers 60fps pan and zoom with 0ms network latency.
-            </p>
-          </div>
-
-          <div class="pillar-card">
-            <span class="pillar-num">02 / SOVEREIGNTY</span>
-            <h3>100% Local Files</h3>
-            <p>
-              Your workspaces reside exclusively on your hard drive in standard open formats (.linteldesk, .md, .csv). Zero bytes uploaded.
-            </p>
-          </div>
-
-          <div class="pillar-card">
-            <span class="pillar-num">03 / OWNERSHIP</span>
-            <h3>Pay Once, Own Forever</h3>
-            <p>
-              A single $49 purchase. No monthly recurring fees, no surprise price increases, and no cloud shutdown risk.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Comparison Table -->
-    <section class="section" id="comparison">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Direct Comparison</h2>
-          <p>
-            How a dedicated native workstation compares to recurring cloud subscriptions.
-          </p>
-        </div>
-
-        <div class="comp-card">
-          <table class="comp-table">
-            <thead>
-              <tr>
-                <th style="width: 35%;">Requirement</th>
-                <th class="highlight-col" style="width: 35%;">LintelDesk</th>
-                <th style="width: 30%;">Cloud SaaS Suites</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Pricing Model</strong></td>
-                <td class="highlight-col">✓ $49 One-Time (Lifetime)</td>
-                <td style="color:#A1A1AA;">✕ $15 – $30 / mo recurring</td>
-              </tr>
-              <tr>
-                <td><strong>File Storage</strong></td>
-                <td class="highlight-col">✓ 100% Local Hard Drive</td>
-                <td style="color:#A1A1AA;">✕ Remote Cloud Servers</td>
-              </tr>
-              <tr>
-                <td><strong>Offline Capability</strong></td>
-                <td class="highlight-col">✓ 100% Fully Functional</td>
-                <td style="color:#A1A1AA;">✕ Read-only or Disabled</td>
-              </tr>
-              <tr>
-                <td><strong>Network Latency</strong></td>
-                <td class="highlight-col">✓ 0.00 ms (Instant)</td>
-                <td style="color:#A1A1AA;">✕ 50–300ms cloud latency</td>
-              </tr>
-              <tr>
-                <td><strong>Telemetry &amp; Tracking</strong></td>
-                <td class="highlight-col">✓ Zero Telemetry</td>
-                <td style="color:#A1A1AA;">✕ Continuous background analytics</td>
-              </tr>
-              <tr>
-                <td><strong>RAM Footprint</strong></td>
-                <td class="highlight-col">✓ ~45 MB idle</td>
-                <td style="color:#A1A1AA;">✕ 800 MB – 2 GB (Browser tabs)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Pricing Section -->
-    <section class="section" id="pricing">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>One Payment. Lifetime Access.</h2>
-          <p>
-            Simple, honest commercial pricing with zero hidden subscriptions.
-          </p>
-        </div>
-
-        <div class="pricing-wrapper">
-          <div class="pricing-card">
-            
-            <div class="pricing-plan-title">
-              Commercial Workstation License
-            </div>
-
-            <div class="pricing-price-row">
-              <span class="pricing-currency">$</span>
-              <span class="pricing-number">49</span>
-              <span class="pricing-term">USD / ONE-TIME</span>
-            </div>
-
-            <p class="pricing-desc">
-              Single one-time payment • Lifetime license • Free v1.x updates
-            </p>
-
-            <ul class="pricing-features-list">
-              <li class="pricing-feature-line">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>All 4 modules included (Docs, Sheets, Tasks, Design)</span>
-              </li>
-              <li class="pricing-feature-line">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Unlimited workspaces and unlimited local files</span>
-              </li>
-              <li class="pricing-feature-line">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Activate on up to 3 personal Windows computers</span>
-              </li>
-              <li class="pricing-feature-line">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>100% offline software with zero cloud dependencies</span>
-              </li>
-              <li class="pricing-feature-line">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Perpetual ownership with free v1.x maintenance updates</span>
-              </li>
-            </ul>
-
-            <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%; max-width: 440px;">
-              Buy LintelDesk — $49
-            </a>
-
-            <div class="payment-badges-row">
-              Card payments processed by Stripe • Checkout via Shoppex.io • Crypto accepted as an optional alternative
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Access Section -->
-    <section class="section" id="download">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Get LintelDesk for Windows</h2>
-          <p>
-            Instant digital delivery via Shoppex.io. Lifetime license with zero recurring subscriptions.
-          </p>
-        </div>
-
-        <div class="download-card" style="text-align: center; align-items: center;">
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">LintelDesk Commercial Workstation (v1.0.0)</h3>
-          <p style="font-size: 0.9375rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 1.5rem;">
-            Windows 10 &amp; 11 (64-bit) • 82.7 MB Setup Installer • Includes all 4 modules (Docs, Sheets, Tasks, Canvas).
-          </p>
-
-          <a href="https://checkout.shoppex.io/pay/pl_1790201548_01a0cc23-e24a-76c8-9da7-486e7e6eb278_e0582c93fb455dad34afa04b" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%; max-width: 440px;">
-            Buy License &amp; Download — $49
-          </a>
-
-          <div class="download-specs-bar" style="margin-top: 1.5rem;">
-            <span>● 64-BIT NATIVE</span>
-            <span>● ZERO TELEMETRY</span>
-            <span>● DIRECTX 12</span>
-            <span>● SHA-256 VERIFIED</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- FAQ Section -->
-    <section class="section" id="faq">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Frequently Asked Questions</h2>
-          <p>Common questions regarding licensing, storage, and offline capabilities.</p>
-        </div>
-
-        <div class="faq-container">
-          
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Can I use LintelDesk without an internet connection?</span>
-              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-content">
-              <p>
-                Yes, 100%. LintelDesk is built as an offline desktop workstation. Once downloaded, you can use it indefinitely with zero network connectivity.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Where are my files and documents stored?</span>
-              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-content">
-              <p>
-                All your files are stored locally on your hard drive in standard open formats (.linteldesk, .md, .csv, .json, .png). We never access, store, or transmit your documents.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>How does payment and software delivery work?</span>
-              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-content">
-              <p>
-                Payments are securely processed via Shoppex.io with Credit/Debit cards or Cryptocurrency. Immediately after purchase, you are redirected directly to download your software installer.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-trigger">
-              <span>Are there any recurring fees or hidden subscriptions?</span>
-              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-content">
-              <p>
-                None. LintelDesk is strictly a single one-time payment of $49 USD. There are no subscriptions, monthly fees, or paywalled features.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Clean Minimalist Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-copy">
-        © 2026 LintelDesk. Sovereign offline workstation for Windows.
-      </div>
-
-      <ul class="footer-links-list">
-        <li><a href="about.html" class="footer-link">About LintelDesk</a></li>
-        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
-        <li><a href="mailto:linteldeks@atomicmail.io" class="footer-link">linteldesk@atomicmail.io</a></li>
-      </ul>
     </div>
-  </footer>
+  </section>
 
-  <script src="app.js"></script>
+  <section id="faq">
+    <div class="wrap">
+      <div class="head"><h2>Questions, answered.</h2></div>
+      <div class="faq">
+        <details><summary>Can I use LintelDesk without an internet connection?</summary><p>Yes. LintelDesk is an offline desktop workstation. Once installed, it works indefinitely with no network connection.</p></details>
+        <details><summary>Where are my files and documents stored?</summary><p>On your hard drive, in open formats (.linteldesk, .md, .csv, .json, .png). We never access, store, or transmit your documents.</p></details>
+        <details><summary>How do payment and delivery work?</summary><p>Shoppex.io processes payment by credit/debit card or cryptocurrency. Right after purchase, you are redirected to download the installer.</p></details>
+        <details><summary>Are there recurring fees or hidden subscriptions?</summary><p>No. LintelDesk is a single $49 USD payment. There are no subscriptions, monthly fees, or paywalled features.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 LintelDesk. Offline workstation for Windows.</div>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="mailto:linteldesk@atomicmail.io">linteldesk@atomicmail.io</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+const m=document.getElementById('menu');
+document.getElementById('toggle').addEventListener('click',()=>m.classList.toggle('open'));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
+</script>
 </body>
 </html>
